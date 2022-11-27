@@ -50,7 +50,7 @@ class Ostoskori:
                 break
 
     def tyhjenna(self):
-        pass
+        self._ostoslista = []
         # tyhjentää ostoskorin
 
     def ostokset(self):
