@@ -2,14 +2,39 @@ class Sovelluslogiikka:
     def __init__(self, tulos=0):
         self.tulos = tulos
 
-    def miinus(self, arvo):
-        self.tulos = self.tulos - arvo
+class Summa:
+    def __init__(self, sovelluslogiikka, lue_syote):
+        self.sovelluslogiikka = sovelluslogiikka
+        self.lue_syote = lue_syote
 
-    def plus(self, arvo):
-        self.tulos = self.tulos + arvo
+    def suorita(self):
+        syote = int(self.lue_syote())
+        self.sovelluslogiikka.tulos += syote
 
-    def nollaa(self):
-        self.tulos = 0
+class Erotus:
+    def __init__(self, sovelluslogiikka, lue_syote):
+        self.sovelluslogiikka = sovelluslogiikka
+        self.lue_syote = lue_syote
 
-    def aseta_arvo(self, arvo):
-        self.tulos = arvo
+    def suorita(self):
+        syote = int(self.lue_syote())
+        self.sovelluslogiikka.tulos -= syote
+
+class Nollaus:
+    def __init__(self, sovelluslogiikka, lue_syote):
+        self.sovelluslogiikka = sovelluslogiikka
+        self.lue_syote = lue_syote
+    
+    def suorita(self):
+        self.sovelluslogiikka.tulos = 0
+
+class Kumoa:
+    def __init__(self, sovelluslogiikka, lue_syote):
+        self.sovelluslogiikka = sovelluslogiikka
+        self.lue_syote = lue_syote
+
+    def suorita(self):
+        pass
+
+
+
