@@ -47,7 +47,7 @@ class TennisGame:
         return abs(self.player1_score - self.player2_score)
 
     def game_status_deuce(self):
-        if self.game_status_drawn() and self.player1_score >= 4:
+        if self.game_status_drawn() and self.player1_score >= 3:
             return True
         else:
             return False
